@@ -1,0 +1,28 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  .aside {
+    width: 20%;
+    border: 1px solid #ccc;
+    background-color: antiquewhite;
+    .item {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+
+  .content {
+    flex: 1;
+    font-size: 16;
+    font-weight: 300px;
+    border: 1px solid #ccc;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

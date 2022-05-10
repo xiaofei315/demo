@@ -1,0 +1,94 @@
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes leave {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.enter {
+  animation: enter 0.5s;
+}
+.leave {
+  animation: leave 0.5s;
+}
+
+.modalContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(204, 204, 204, 0.486);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: enter 0.3s linear;
+  .contentWrap {
+    width: 317px;
+    height: 259px;
+    background: #fff;
+    border: 1px solid aqua;
+    box-shadow: 0 0 10px aqua;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      height: 42px;
+      text-align: center;
+      line-height: 42px;
+      border-bottom: 0.3px solid aqua;
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .btnWrap {
+      height: 47px;
+      line-height: 47px;
+      text-align: center;
+      border-top: 2px solid aqua;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .cancel {
+        flex: 1;
+        border-right: 2px solid aqua;
+      }
+      .confirm {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .item {
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+}
